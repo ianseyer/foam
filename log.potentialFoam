@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------
+[[30491,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: arc
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.1
+Exec   : potentialFoam -parallel
+Date   : Jan 29 2017
+Time   : 22:12:27
+Host   : "arc"
+PID    : 27076
+Case   : /home/relay/OpenFOAM/relay-4.1/run/motorBike
+nProcs : 6
+Slaves : 
+5
+(
+"arc.27077"
+"arc.27078"
+"arc.27079"
+"arc.27080"
+"arc.27081"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+potentialFlow: Operating solver in PISO mode
+
+Reading velocity field U
+
+Constructing pressure field p
+
+Constructing velocity potential field Phi
+
+No MRF models present
+
+
+Calculating potential flow
+GAMG:  Solving for Phi, Initial residual = 1, Final residual = 0.00908198, No Iterations 8
+GAMG:  Solving for Phi, Initial residual = 0.0460586, Final residual = 0.000231503, No Iterations 3
+GAMG:  Solving for Phi, Initial residual = 0.00170156, Final residual = 1.01666e-05, No Iterations 5
+GAMG:  Solving for Phi, Initial residual = 0.000169209, Final residual = 9.79526e-07, No Iterations 5
+GAMG:  Solving for Phi, Initial residual = 2.29967e-05, Final residual = 1.42764e-07, No Iterations 5
+GAMG:  Solving for Phi, Initial residual = 6.29753e-06, Final residual = 7.0398e-08, No Iterations 4
+GAMG:  Solving for Phi, Initial residual = 2.86478e-06, Final residual = 9.02627e-08, No Iterations 2
+GAMG:  Solving for Phi, Initial residual = 1.63755e-06, Final residual = 5.503e-08, No Iterations 2
+GAMG:  Solving for Phi, Initial residual = 1.01448e-06, Final residual = 3.94239e-08, No Iterations 2
+GAMG:  Solving for Phi, Initial residual = 6.76271e-07, Final residual = 7.55964e-08, No Iterations 1
+GAMG:  Solving for Phi, Initial residual = 5.01293e-07, Final residual = 5.2254e-08, No Iterations 1
+Continuity error = 3.09675e-06
+Interpolated velocity error = 0.000283055
+ExecutionTime = 1.24 s  ClockTime = 1 s
+
+End
+
+Finalising parallel run
+[arc:27075] 5 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[arc:27075] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
